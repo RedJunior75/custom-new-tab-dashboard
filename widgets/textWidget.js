@@ -16,7 +16,6 @@ export class TextWidget {
     div.innerHTML = `<strong>${this.title}</strong><div>${this.content}</div>`;
     container.appendChild(div);
 
-    // Drag & drop
     let offsetX, offsetY;
     div.addEventListener("mousedown", (e) => {
       offsetX = e.clientX - div.offsetLeft;
@@ -30,7 +29,6 @@ export class TextWidget {
       function up() {
         document.removeEventListener("mousemove", move);
         document.removeEventListener("mouseup", up);
-        // TODO: mettre à jour x/y dans storage
       }
 
       document.addEventListener("mousemove", move);
@@ -38,3 +36,4 @@ export class TextWidget {
     });
   }
 }
+
