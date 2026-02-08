@@ -1,0 +1,13 @@
+{
+  "name": "Custom New Tab",
+  "version": "0.2",
+  "manifest_version": 3,
+  "chrome_url_overrides": {
+    "newtab": "newtab/newtab.html"
+  },
+  "permissions": ["storage"],
+  "options_ui": {
+    "page": "option/options.html",
+    "open_in_tab": true
+  }
+}
