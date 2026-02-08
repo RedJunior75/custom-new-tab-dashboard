@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Options Nouvel Onglet</title>
+  <style>
+    body { font-family: system-ui; padding: 2rem; background:#f5f5f5; color:#111; }
+    .bg-option, .widget-option { display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem; }
+    button { padding:0.5rem 1rem; margin-top:1rem; margin-right:0.5rem; }
+  </style>
+  <script type="module" src="options.js"></script>
+</head>
+<body>
+  <h2>Type de fond :</h2>
+  <div class="bg-option">
+    <label><input type="radio" name="bgType" value="color" checked> Couleur unie</label>
+    <input type="color" id="colorInput">
+  </div>
+  <div class="bg-option">
+    <label><input type="radio" name="bgType" value="file"> Fichier / URL</label>
+    <input type="text" id="fileUrlInput" placeholder="https://...">
+    <input type="file" id="fileInput" style="display:none;">
+    <button id="urlBtn">💻 URL</button>
+    <button id="fileBtn">📁 Fichier</button>
+  </div>
+  <div class="bg-option">
+    <label><input type="radio" name="bgType" value="gradient"> Dégradé</label>
+    <input type="color" id="gradientStart">
+    <input type="color" id="gradientEnd">
+  </div>
+
+  <h2>Widgets To-Do :</h2>
+  <button id="addWidget">➕ Ajouter un widget To-Do</button>
+  <div id="widgetsList"></div>
+
+  <button id="saveBtn">💾 Sauvegarder</button>
+  <button id="backBtn">⬅️ Retour</button>
+</body>
+</html>
